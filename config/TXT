@@ -1,0 +1,2 @@
+npx sequelize-cli model:generate --name users --attributes id:string,name:string,email:string,balance:string
+npx sequelize-cli model:generate --name transaction --attributes id:string,senderId:string,receiverId:string,amount:string
