@@ -1,10 +1,9 @@
-const express = require('express');
+const usersRouter = require('express').Router()
 const { createUser, getUser, getAllUsers } = require('../controller/usersController'); // Corrected import
 
-const router = express.Router();
 
-router.post('/users', createUser);
-router.get('/users/:id', getUser);
-router.get('/users', getAllUsers);
+usersRouter.post('/users', createUser);
+usersRouter.get('/users/:id', getUser);
+usersRouter.get('/users', getAllUsers);
 
-module.exports = router;
+module.exports = usersRouter;

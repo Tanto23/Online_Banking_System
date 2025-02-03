@@ -3,12 +3,13 @@ const PORT = 5454; // Changed port number to avoid conflict
 const transactionRouter = require("./router/transactionRouter");
 const usersRouter = require("./router/usersRouter"); // Corrected import
 
+
 const app = express();
 app.use(express.json());
 
 
-app.use('/api', transactionRouter); // Corrected usage
-app.use('/api', usersRouter); // Corrected usage
+app.use( transactionRouter); // Corrected usage
+app.use( usersRouter); // Corrected usage
 
 app.listen(PORT, () => {
     console.log("My app is running on port " + PORT);

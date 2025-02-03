@@ -1,9 +1,9 @@
-const express = require('express');
+
+const transactionRouter = require("express").Router();
 const { transferFunds, getTransactions } = require('../controller/transactionController'); // Corrected import path
 
-const router = express.Router();
 
-router.post('/transfer', transferFunds);
-router.get('/transactions/:userId', getTransactions);
+transactionRouter.post('/transfer', transferFunds);
+transactionRouter.get('/transactions/:userId', getTransactions);
 
-module.exports = router;
+module.exports = transactionRouter;
